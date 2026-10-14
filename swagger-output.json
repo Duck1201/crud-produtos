@@ -1,0 +1,36 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "APIs do projeto",
+    "description": "APIs para a comunicação com backend do projeto.",
+    "version": "1.0.0"
+  },
+  "host": "127.0.0.1:3000",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Autenticação",
+      "description": "Endpoints responsáveis pelo gerenciamento de acesso e tokens."
+    },
+    {
+      "name": "Usuários",
+      "description": "Endpoints para consulta e manipulação de perfis de usuários."
+    },
+    {
+      "name": "Observabilidade",
+      "description": "Endpoints uteis para monitoramento."
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "securityDefinitions": {
+    "apiKeyAuth": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Authorization",
+      "description": "Insira o token JWT neste formato: Bearer <seu_token>"
+    }
+  },
+  "paths": {}
+}
