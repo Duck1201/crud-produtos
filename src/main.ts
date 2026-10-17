@@ -3,6 +3,7 @@ import type { Request, Response } from 'express';
 import cors from 'cors';
 import { config } from 'dotenv';
 import { CorsConfigs } from './utils/cors';
+import userRoutes from './routes/users-routes';
 import systemRoutes from './routes/system-routes';
 config();
 
@@ -14,6 +15,7 @@ app.use(cors(CorsConfigs));
 
 // Rotas
 app.use('/', systemRoutes);
+app.use('/users', userRoutes);
 
 // Middlewares basicos
 app.use('*any', (_: Request, res: Response) => {
